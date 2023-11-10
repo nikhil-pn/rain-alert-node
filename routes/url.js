@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
 
       if (weather_id < 700) {
         console.log("Bring an Umbrella");
-        // Add your email sending logic here
+        // Add your email sending logic heredd
 
         const my_email = process.env.SMTPMAIL;
         const password = process.env.PASSWORD;
