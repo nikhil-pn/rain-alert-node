@@ -3,16 +3,17 @@ const nodemailer = require("nodemailer");
 const fetch = require("node-fetch");
 require("dotenv").config();
 
+
 const router = express.Router();
 
 router.post("/", async (req, res) => {
   try {
     const { longUrl } = req.body;
+    // const longUrl = "nikhilpn725@gmail.com";
     //weather data respone
     const data = await getWeatherData();
     for (let index = 0; index < 10; index++) {
       const weather_id = data.hourly[index].weather[0].id;
-
       if (weather_id < 700) {
         console.log("Bring an Umbrella");
         // Add your email sending logic heredd
