@@ -14,7 +14,8 @@ router.post("/", async (req, res) => {
     const data = await getWeatherData();
     for (let index = 0; index < 10; index++) {
       const weather_id = data.hourly[index].weather[0].id;
-      if (weather_id < 700) {
+      console.log(weather_id, "waether id");
+      if (weather_id < 1700) {
         console.log("Bring an Umbrella");
         // Add your email sending logic heredd
 
